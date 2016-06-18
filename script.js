@@ -7,6 +7,3 @@ function onButtonClick1() {
         outControl.value += items[i] + "\r\n";
     }
 }
-
-array.forEach(function(elem, index, arr){
-});
