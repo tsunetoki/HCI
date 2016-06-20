@@ -6,14 +6,19 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="script.js"></script>
     </head>
-
     <body>
-        <form name="form1" id="id_form1" action="">
-            <textarea name="textBox1" id="id_textBox1" type="text" placeholder="英文を入力してください" class=in></textarea>
+        <form>
+            <textarea id="textBox" placeholder="英文を入力してください" class=in></textarea>
+            <p>表示速度の変更</p>
+            <input type="range" min="149" max="951" step="50" class="range">
             </br>
-            <input type="button" value=" 読み込む " onclick="onButtonClick1();" />
-            <input type="button" value=" スタート " onclick="onButtonClick2();" />
+            </br>
+            </br>
+            <input type="button" value=" スタート " onclick="onButtonClick(1);" />
+            <button onclick="onButtonClick(null);"> キャンセル </button>
         </form>
-        <textarea readonly id="output" class=out></textarea><br />
+        <span>
+            <div class="flashText"></div>
+        </span>
     </body>
 </html>

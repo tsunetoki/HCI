@@ -16,14 +16,20 @@ textarea.in {
     box-shadow: inner 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
-textarea.out {
+div.flashText {
     border:0;
     padding:10px;
-    font-size:3em;
+    font-size:2em;
     font-family:Arial, sans-serif;
-    color:#777777;
+    color:#444444;
     border:solid 1px #ccc;
     margin:0 0 20px;
-    width:450px;
-    height: 100px;
+    width:300px;
+    height: 30px;
+}
+
+span {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }

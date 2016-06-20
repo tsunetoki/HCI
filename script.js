@@ -1,9 +1,18 @@
-function onButtonClick1() {
-    var input = document.getElementById("id_textBox1").value;
-    var items = input.split(" ");
+function onButtonClick(state) {
+    if (state==1){
+        var input = document.querySelector("#textBox").value;
+        var items = input.split(/\s+/);
 
-    var outControl = document.getElementById("output");
-    for (var i = 0; i < items.length; i++) {
-        outControl.value += items[i] + "\r\n";
+        var i = 0;
+        var looper = function(){
+            var num = document.querySelector("input.range").value;
+            document.querySelector("div.flashText").innerText=items[i];
+            i++;
+            var st = setTimeout(looper,num);
+            if (i>=items.length) clearTimeout(st);
+        }
+        looper();
+    } else {
+        i=items.length;
     }
 }
